@@ -1,0 +1,6 @@
+framework module Pods_191LogicChain {
+  umbrella header "Pods-191LogicChain-umbrella.h"
+
+  export *
+  module * { export * }
+}
