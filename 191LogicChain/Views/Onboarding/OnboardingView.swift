@@ -34,10 +34,14 @@ struct OnboardingView: View {
                     .padding(.bottom, Theme.Spacing.md)
 
                 actionButton
-                    .padding(.horizontal, Theme.Spacing.md)
+                    .adaptiveContentWidth()
+                    .adaptiveHorizontalPadding()
                     .padding(.bottom, Theme.Spacing.xl)
             }
+            .adaptiveContentWidth()
+            .adaptiveHorizontalPadding()
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
     private var pageIndicator: some View {

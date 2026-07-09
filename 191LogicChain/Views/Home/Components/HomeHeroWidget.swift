@@ -7,12 +7,8 @@ struct HomeHeroWidget: View {
     let badges: Int
 
     var body: some View {
-        ZStack(alignment: .bottom) {
-            Image("HomeHero")
-                .resizable()
-                .scaledToFill()
-                .frame(height: 240)
-                .clipped()
+        ZStack {
+            tileBackground
 
             LinearGradient(
                 colors: [
@@ -24,16 +20,21 @@ struct HomeHeroWidget: View {
                 endPoint: .bottom
             )
 
-            VStack(alignment: .leading, spacing: Theme.Spacing.md) {
+            VStack(alignment: .leading, spacing: 0) {
                 VStack(alignment: .leading, spacing: 6) {
                     TagBadge(text: "HOME", color: Theme.accent)
                     Text("Word Logic Chains")
                         .font(.title2.bold())
                         .foregroundColor(.white)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.85)
                     Text("Connect words letter by letter")
                         .font(.subheadline)
                         .foregroundColor(.white.opacity(0.82))
+                        .lineLimit(2)
                 }
+
+                Spacer(minLength: 12)
 
                 HStack(spacing: 8) {
                     heroStat(icon: "🏆", value: "\(wins)", label: "Wins")
@@ -42,10 +43,10 @@ struct HomeHeroWidget: View {
                     heroStat(icon: "🏅", value: "\(badges)", label: "Badges")
                 }
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
             .padding(Theme.Spacing.md)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         }
-        .frame(height: 240)
+        .frame(maxWidth: .infinity, minHeight: 240, maxHeight: 240)
         .clipShape(RoundedRectangle(cornerRadius: Theme.Radius.xl, style: .continuous))
         .overlay(
             RoundedRectangle(cornerRadius: Theme.Radius.xl, style: .continuous)
@@ -61,6 +62,16 @@ struct HomeHeroWidget: View {
         .elevatedShadow(.prominent)
     }
 
+    private var tileBackground: some View {
+        GeometryReader { geo in
+            Image("HomeHero")
+                .resizable()
+                .scaledToFill()
+                .frame(width: geo.size.width, height: geo.size.height)
+                .clipped()
+        }
+    }
+
     private func heroStat(icon: String, value: String, label: String) -> some View {
         VStack(spacing: 4) {
             Text(icon).font(.caption)
@@ -72,6 +83,7 @@ struct HomeHeroWidget: View {
             Text(label)
                 .font(.caption2)
                 .foregroundColor(.white.opacity(0.7))
+                .lineLimit(1)
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, 10)

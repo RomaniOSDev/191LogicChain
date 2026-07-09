@@ -21,6 +21,7 @@ struct HomeModeGridWidget: View {
                 accent: Theme.accent,
                 action: onSolo
             )
+            .layoutPriority(1)
 
             HomeImageTile(
                 imageName: "WidgetBattle",
@@ -29,6 +30,7 @@ struct HomeModeGridWidget: View {
                 accent: Theme.danger,
                 action: onBattle
             )
+            .layoutPriority(1)
 
             HomeImageTile(
                 imageName: "WidgetTime",
@@ -37,6 +39,7 @@ struct HomeModeGridWidget: View {
                 accent: Color(hex: "ffa500"),
                 action: onTimeAttack
             )
+            .layoutPriority(1)
 
             HomeImageTile(
                 imageName: "WidgetMinimal",
@@ -45,6 +48,7 @@ struct HomeModeGridWidget: View {
                 accent: Theme.accent,
                 action: onMinimal
             )
+            .layoutPriority(1)
 
             HomeImageTile(
                 imageName: "WidgetPuzzle",
@@ -55,6 +59,7 @@ struct HomeModeGridWidget: View {
                 action: onPuzzles
             )
             .gridCellColumns(2)
+            .layoutPriority(1)
         }
     }
 }
@@ -73,6 +78,7 @@ struct HomeCreateShareWidget: View {
                 height: 132,
                 action: onChainBuilder
             )
+            .frame(maxWidth: .infinity)
 
             HomeImageTile(
                 imageName: "WidgetFriend",
@@ -82,6 +88,7 @@ struct HomeCreateShareWidget: View {
                 height: 132,
                 action: onFriendChallenge
             )
+            .frame(maxWidth: .infinity)
         }
     }
 }

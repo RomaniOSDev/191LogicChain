@@ -13,12 +13,7 @@ struct HomeImageTile: View {
     var body: some View {
         Button(action: action) {
             ZStack(alignment: .bottomLeading) {
-                Image(imageName)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(maxWidth: .infinity)
-                    .frame(height: height)
-                    .clipped()
+                tileBackground
 
                 LinearGradient(
                     colors: [
@@ -30,26 +25,28 @@ struct HomeImageTile: View {
                     endPoint: .bottom
                 )
 
-                HStack(alignment: .bottom) {
+                HStack(alignment: .bottom, spacing: 8) {
                     VStack(alignment: .leading, spacing: 4) {
                         Text(title)
                             .font(.headline)
                             .foregroundColor(.white)
+                            .lineLimit(1)
                         Text(subtitle)
                             .font(.caption)
                             .foregroundColor(.white.opacity(0.82))
                             .lineLimit(2)
                             .multilineTextAlignment(.leading)
+                            .fixedSize(horizontal: false, vertical: true)
                     }
-
-                    Spacer(minLength: 8)
+                    .frame(maxWidth: .infinity, alignment: .leading)
 
                     Image(systemName: "arrow.up.right.circle.fill")
                         .font(.title3)
                         .foregroundColor(accent)
                 }
-                .padding(14)
+                .padding(12)
             }
+            .frame(maxWidth: .infinity, minHeight: height, maxHeight: height)
             .clipShape(RoundedRectangle(cornerRadius: Theme.Radius.lg, style: .continuous))
             .overlay(
                 RoundedRectangle(cornerRadius: Theme.Radius.lg, style: .continuous)
@@ -66,10 +63,21 @@ struct HomeImageTile: View {
             .scaleEffect(pressed ? 0.97 : 1)
         }
         .buttonStyle(.plain)
+        .frame(maxWidth: .infinity)
         .simultaneousGesture(
             DragGesture(minimumDistance: 0)
                 .onChanged { _ in pressed = true }
                 .onEnded { _ in pressed = false }
         )
+    }
+
+    private var tileBackground: some View {
+        GeometryReader { geo in
+            Image(imageName)
+                .resizable()
+                .scaledToFill()
+                .frame(width: geo.size.width, height: geo.size.height)
+                .clipped()
+        }
     }
 }

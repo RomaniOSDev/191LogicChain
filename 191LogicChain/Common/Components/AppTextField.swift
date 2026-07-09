@@ -38,12 +38,16 @@ struct WordChainBadge: View {
             Text(start)
                 .font(size.weight(.bold))
                 .foregroundColor(Theme.accent)
+                .lineLimit(1)
+                .minimumScaleFactor(0.75)
             Image(systemName: "arrow.right")
                 .font(.caption.weight(.bold))
                 .foregroundColor(Theme.secondaryText)
             Text(end)
                 .font(size.weight(.bold))
                 .foregroundColor(Theme.danger)
+                .lineLimit(1)
+                .minimumScaleFactor(0.75)
         }
     }
 }

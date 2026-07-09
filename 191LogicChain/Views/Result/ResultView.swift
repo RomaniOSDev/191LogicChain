@@ -151,12 +151,14 @@ struct ResultView: View {
                         AnimatedButton(title: "Home", icon: "house.fill", color: Theme.secondaryText, style: .outline, action: viewModel.goHome)
                         AnimatedButton(title: "Records", icon: "crown.fill", color: Theme.accent, style: .outline, action: viewModel.goToLeaderboard)
                     }
-                    .padding(.horizontal, Theme.Spacing.md)
-                    .padding(.bottom, Theme.Spacing.xl)
                 }
+                .adaptiveContentWidth()
+                .adaptiveHorizontalPadding()
                 .padding(.top, Theme.Spacing.md)
+                .padding(.bottom, Theme.Spacing.xl)
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .navigationBarBackButtonHidden(true)
     }
 }

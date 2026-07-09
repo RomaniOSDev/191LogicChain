@@ -20,7 +20,6 @@ struct StatisticsView: View {
                         StatPillCell(icon: "📈", value: String(format: "%.1f", viewModel.stats.averageChainLength), label: "Avg Chain")
                         StatPillCell(icon: "🔥", value: "\(viewModel.stats.streaks)", label: "Streak", accent: Theme.danger)
                     }
-                    .padding(.horizontal, Theme.Spacing.md)
 
                     if !viewModel.winsByMode.isEmpty {
                         AppCard {
@@ -49,7 +48,6 @@ struct StatisticsView: View {
                                 }
                             }
                         }
-                        .padding(.horizontal, Theme.Spacing.md)
                     }
 
                     if !viewModel.chainLengthTrend.isEmpty {
@@ -72,7 +70,6 @@ struct StatisticsView: View {
                                 .frame(height: 160)
                             }
                         }
-                        .padding(.horizontal, Theme.Spacing.md)
                     }
 
                     if viewModel.recentSessions.isEmpty {
@@ -83,6 +80,8 @@ struct StatisticsView: View {
                         )
                     }
                 }
+                .adaptiveContentWidth()
+                .adaptiveHorizontalPadding()
                 .padding(.vertical, Theme.Spacing.sm)
             }
         }

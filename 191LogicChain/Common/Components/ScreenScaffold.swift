@@ -25,10 +25,14 @@ struct ScreenScaffold<Content: View>: View {
             VStack(spacing: 0) {
                 if onBack != nil || title != nil {
                     navBar
+                        .adaptiveContentWidth()
+                        .adaptiveHorizontalPadding()
                 }
                 content()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .navigationBarBackButtonHidden(true)
     }
 
@@ -69,7 +73,6 @@ struct ScreenScaffold<Content: View>: View {
 
             Spacer()
         }
-        .padding(.horizontal, Theme.Spacing.md)
         .padding(.vertical, Theme.Spacing.sm)
         .background(
             LinearGradient(

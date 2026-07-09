@@ -31,5 +31,28 @@ extension Theme {
         static let md: CGFloat = 16
         static let lg: CGFloat = 20
         static let xl: CGFloat = 28
+        static let xxl: CGFloat = 36
+    }
+}
+
+enum AdaptiveLayout {
+    static func gridColumns(count: Int, spacing: CGFloat = 12) -> [GridItem] {
+        Array(repeating: GridItem(.flexible(), spacing: spacing), count: count)
+    }
+}
+
+private struct AdaptiveHorizontalPaddingModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content.padding(.horizontal, Theme.Spacing.lg)
+    }
+}
+
+extension View {
+    func adaptiveContentWidth(_ maxWidth: CGFloat = .infinity) -> some View {
+        frame(maxWidth: .infinity)
+    }
+
+    func adaptiveHorizontalPadding() -> some View {
+        modifier(AdaptiveHorizontalPaddingModifier())
     }
 }

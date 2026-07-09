@@ -71,7 +71,9 @@ struct SettingsView: View {
                         }
                     }
                 }
-                .padding(Theme.Spacing.md)
+                .adaptiveContentWidth()
+                .adaptiveHorizontalPadding()
+                .padding(.vertical, Theme.Spacing.sm)
             }
         }
         .alert("Reset All Data?", isPresented: $viewModel.showResetAlert) {

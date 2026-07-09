@@ -14,12 +14,8 @@ struct HomeChallengeWidget: View {
 
     var body: some View {
         Button(action: action) {
-            ZStack(alignment: .bottomLeading) {
-                Image(imageName)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(height: 176)
-                    .clipped()
+            ZStack {
+                tileBackground
 
                 LinearGradient(
                     colors: [
@@ -31,38 +27,46 @@ struct HomeChallengeWidget: View {
                     endPoint: .bottom
                 )
 
-                VStack(alignment: .leading, spacing: 10) {
+                VStack(alignment: .leading, spacing: 0) {
                     HStack {
                         TagBadge(text: badge, color: accent)
-                        Spacer()
+                        Spacer(minLength: 8)
                         Image(systemName: isCompleted ? "checkmark.seal.fill" : "play.circle.fill")
                             .font(.title3)
                             .foregroundColor(accent)
                     }
 
-                    Text(title)
-                        .font(.headline)
-                        .foregroundColor(.white)
+                    Spacer(minLength: 8)
 
-                    WordChainBadge(start: chainStart, end: chainEnd)
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text(title)
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .lineLimit(1)
 
-                    Text(meta)
-                        .font(.caption)
-                        .foregroundColor(.white.opacity(0.75))
+                        WordChainBadge(start: chainStart, end: chainEnd)
 
-                    if let footer {
-                        Text(footer)
-                            .font(.caption.weight(.semibold))
-                            .foregroundColor(accent)
-                    } else if !isCompleted {
-                        Text("Tap to play")
-                            .font(.caption.weight(.semibold))
-                            .foregroundColor(accent)
+                        Text(meta)
+                            .font(.caption)
+                            .foregroundColor(.white.opacity(0.75))
+                            .lineLimit(1)
+
+                        if let footer {
+                            Text(footer)
+                                .font(.caption.weight(.semibold))
+                                .foregroundColor(accent)
+                                .lineLimit(1)
+                        } else if !isCompleted {
+                            Text("Tap to play")
+                                .font(.caption.weight(.semibold))
+                                .foregroundColor(accent)
+                        }
                     }
                 }
-                .padding(16)
+                .padding(14)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             }
-            .frame(height: 176)
+            .frame(maxWidth: .infinity, minHeight: 176, maxHeight: 176)
             .clipShape(RoundedRectangle(cornerRadius: Theme.Radius.lg, style: .continuous))
             .overlay(
                 RoundedRectangle(cornerRadius: Theme.Radius.lg, style: .continuous)
@@ -78,7 +82,18 @@ struct HomeChallengeWidget: View {
             .elevatedShadow(.raised)
         }
         .buttonStyle(.plain)
+        .frame(maxWidth: .infinity)
         .disabled(isCompleted)
         .opacity(isCompleted ? 0.8 : 1)
+    }
+
+    private var tileBackground: some View {
+        GeometryReader { geo in
+            Image(imageName)
+                .resizable()
+                .scaledToFill()
+                .frame(width: geo.size.width, height: geo.size.height)
+                .clipped()
+        }
     }
 }

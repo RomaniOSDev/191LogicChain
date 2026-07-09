@@ -11,7 +11,8 @@ struct DictionaryView: View {
         ScreenScaffold(title: "Dictionary", subtitle: "\(viewModel.filteredWords.count) words", onBack: viewModel.goBack) {
             VStack(spacing: Theme.Spacing.sm) {
                 AppTextField(placeholder: "Search words or synonyms", text: $viewModel.searchText, icon: "magnifyingglass")
-                    .padding(.horizontal, Theme.Spacing.md)
+                    .adaptiveContentWidth()
+                    .adaptiveHorizontalPadding()
 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 8) {
@@ -24,7 +25,7 @@ struct DictionaryView: View {
                             }
                         }
                     }
-                    .padding(.horizontal, Theme.Spacing.md)
+                    .adaptiveHorizontalPadding()
                 }
 
                 ScrollView(showsIndicators: false) {
@@ -39,7 +40,8 @@ struct DictionaryView: View {
                             )
                         }
                     }
-                    .padding(.horizontal, Theme.Spacing.md)
+                    .adaptiveContentWidth()
+                    .adaptiveHorizontalPadding()
                     .padding(.bottom, Theme.Spacing.lg)
                 }
             }

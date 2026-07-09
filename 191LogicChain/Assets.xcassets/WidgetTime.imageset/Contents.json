@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "widget_time.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "widget_time.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

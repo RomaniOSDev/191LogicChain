@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "widget_daily.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "widget_daily.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

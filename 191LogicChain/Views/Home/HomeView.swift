@@ -92,9 +92,9 @@ struct HomeView: View {
                         )
                     }
                 }
-                .padding(.horizontal, Theme.Spacing.md)
-                .padding(.top, Theme.Spacing.md)
-                .padding(.bottom, Theme.Spacing.xl)
+                .padding(.horizontal, Theme.Spacing.lg)
+                .padding(.top, Theme.Spacing.lg)
+                .padding(.bottom, Theme.Spacing.xxl)
             }
         }
         .onReceive(NotificationCenter.default.publisher(for: .playAgain)) { _ in

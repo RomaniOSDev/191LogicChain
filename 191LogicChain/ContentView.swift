@@ -21,6 +21,7 @@ struct ContentView: View {
                 }
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .preferredColorScheme(.dark)
         .applyAccessibility(accessibility)
         .onAppear {
@@ -38,6 +39,7 @@ struct ContentView: View {
                     coordinator.destination(for: route)
                 }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
