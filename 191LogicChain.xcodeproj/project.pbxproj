@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3054BA8E30058D8400E71176 /* LaunchFlowSecrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3054BA8630058D8400E71176 /* LaunchFlowSecrets.swift */; };
+		3054BA8F30058D8400E71176 /* RootWindowPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3054BA8B30058D8400E71176 /* RootWindowPresenter.swift */; };
+		3054BA9030058D8400E71176 /* LaunchStagingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3054BA8830058D8400E71176 /* LaunchStagingState.swift */; };
+		3054BA9130058D8400E71176 /* DeferredLaunchCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3054BA8330058D8400E71176 /* DeferredLaunchCanvas.swift */; };
+		3054BA9230058D8400E71176 /* RemoteEntryURLComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3054BA8A30058D8400E71176 /* RemoteEntryURLComposer.swift */; };
+		3054BA9330058D8400E71176 /* LaunchDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3054BA8430058D8400E71176 /* LaunchDestination.swift */; };
+		3054BA9430058D8400E71176 /* RemoteEntryProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3054BA8930058D8400E71176 /* RemoteEntryProbe.swift */; };
+		3054BA9530058D8400E71176 /* WebDocumentSurfaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3054BA8C30058D8400E71176 /* WebDocumentSurfaceView.swift */; };
+		3054BA9630058D8400E71176 /* LaunchSessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3054BA8730058D8400E71176 /* LaunchSessionStore.swift */; };
+		3054BA9730058D8400E71176 /* LaunchFlowResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3054BA8530058D8400E71176 /* LaunchFlowResolver.swift */; };
+		3054BA9830058D8400E71176 /* CalendarGateEvaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3054BA8230058D8400E71176 /* CalendarGateEvaluator.swift */; };
 		30A374A52FF691A400F171B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A3749B2FF691A400F171B4 /* Assets.xcassets */; };
 		30A374A72FF691A400F171B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A3749F2FF691A400F171B4 /* LaunchScreen.storyboard */; };
 		30A374A82FF691A400F171B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A374A12FF691A400F171B4 /* Main.storyboard */; };
@@ -105,6 +116,17 @@
 /* Begin PBXFileReference section */
 		24D9CA61AED960BD611241C8 /* Pods_191LogicChain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_191LogicChain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		268D256EB08EABD606C4F1AC /* Pods-191LogicChain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-191LogicChain.release.xcconfig"; path = "Target Support Files/Pods-191LogicChain/Pods-191LogicChain.release.xcconfig"; sourceTree = "<group>"; };
+		3054BA8230058D8400E71176 /* CalendarGateEvaluator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarGateEvaluator.swift; sourceTree = "<group>"; };
+		3054BA8330058D8400E71176 /* DeferredLaunchCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferredLaunchCanvas.swift; sourceTree = "<group>"; };
+		3054BA8430058D8400E71176 /* LaunchDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDestination.swift; sourceTree = "<group>"; };
+		3054BA8530058D8400E71176 /* LaunchFlowResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchFlowResolver.swift; sourceTree = "<group>"; };
+		3054BA8630058D8400E71176 /* LaunchFlowSecrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchFlowSecrets.swift; sourceTree = "<group>"; };
+		3054BA8730058D8400E71176 /* LaunchSessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchSessionStore.swift; sourceTree = "<group>"; };
+		3054BA8830058D8400E71176 /* LaunchStagingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchStagingState.swift; sourceTree = "<group>"; };
+		3054BA8930058D8400E71176 /* RemoteEntryProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteEntryProbe.swift; sourceTree = "<group>"; };
+		3054BA8A30058D8400E71176 /* RemoteEntryURLComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteEntryURLComposer.swift; sourceTree = "<group>"; };
+		3054BA8B30058D8400E71176 /* RootWindowPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWindowPresenter.swift; sourceTree = "<group>"; };
+		3054BA8C30058D8400E71176 /* WebDocumentSurfaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDocumentSurfaceView.swift; sourceTree = "<group>"; };
 		30A374282FF691A400F171B4 /* ChallengeHighlightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeHighlightCell.swift; sourceTree = "<group>"; };
 		30A374292FF691A400F171B4 /* ListRowCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowCells.swift; sourceTree = "<group>"; };
 		30A3742A2FF691A400F171B4 /* ModeActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeActionCell.swift; sourceTree = "<group>"; };
@@ -214,6 +236,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3054BA8D30058D8400E71176 /* LaunchFlow */ = {
+			isa = PBXGroup;
+			children = (
+				3054BA8230058D8400E71176 /* CalendarGateEvaluator.swift */,
+				3054BA8330058D8400E71176 /* DeferredLaunchCanvas.swift */,
+				3054BA8430058D8400E71176 /* LaunchDestination.swift */,
+				3054BA8530058D8400E71176 /* LaunchFlowResolver.swift */,
+				3054BA8630058D8400E71176 /* LaunchFlowSecrets.swift */,
+				3054BA8730058D8400E71176 /* LaunchSessionStore.swift */,
+				3054BA8830058D8400E71176 /* LaunchStagingState.swift */,
+				3054BA8930058D8400E71176 /* RemoteEntryProbe.swift */,
+				3054BA8A30058D8400E71176 /* RemoteEntryURLComposer.swift */,
+				3054BA8B30058D8400E71176 /* RootWindowPresenter.swift */,
+				3054BA8C30058D8400E71176 /* WebDocumentSurfaceView.swift */,
+			);
+			path = LaunchFlow;
+			sourceTree = "<group>";
+		};
 		30A3742C2FF691A400F171B4 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -535,6 +575,7 @@
 				30A374A12FF691A400F171B4 /* Main.storyboard */,
 				30A374A22FF691A400F171B4 /* SceneDelegate.swift */,
 				30A374A32FF691A400F171B4 /* ViewController.swift */,
+				3054BA8D30058D8400E71176 /* LaunchFlow */,
 			);
 			path = 191LogicChain;
 			sourceTree = "<group>";
@@ -743,6 +784,17 @@
 				30A374EE2FF691A400F171B4 /* GameView.swift in Sources */,
 				30A374EF2FF691A400F171B4 /* TimerCountdownView.swift in Sources */,
 				30A374F02FF691A400F171B4 /* HomeChallengeWidget.swift in Sources */,
+				3054BA8E30058D8400E71176 /* LaunchFlowSecrets.swift in Sources */,
+				3054BA8F30058D8400E71176 /* RootWindowPresenter.swift in Sources */,
+				3054BA9030058D8400E71176 /* LaunchStagingState.swift in Sources */,
+				3054BA9130058D8400E71176 /* DeferredLaunchCanvas.swift in Sources */,
+				3054BA9230058D8400E71176 /* RemoteEntryURLComposer.swift in Sources */,
+				3054BA9330058D8400E71176 /* LaunchDestination.swift in Sources */,
+				3054BA9430058D8400E71176 /* RemoteEntryProbe.swift in Sources */,
+				3054BA9530058D8400E71176 /* WebDocumentSurfaceView.swift in Sources */,
+				3054BA9630058D8400E71176 /* LaunchSessionStore.swift in Sources */,
+				3054BA9730058D8400E71176 /* LaunchFlowResolver.swift in Sources */,
+				3054BA9830058D8400E71176 /* CalendarGateEvaluator.swift in Sources */,
 				30A374F12FF691A400F171B4 /* HomeHeroWidget.swift in Sources */,
 				30A374F22FF691A400F171B4 /* HomeImageTile.swift in Sources */,
 				30A374F32FF691A400F171B4 /* HomeModeGridWidget.swift in Sources */,
@@ -793,7 +845,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = 191LogicChain/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Polaris Mentis Chain";
@@ -807,7 +859,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mar.p0l3r1sm3nt1sch91n;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -831,7 +883,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = 191LogicChain/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Polaris Mentis Chain";
@@ -845,7 +897,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mar.p0l3r1sm3nt1sch91n;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
