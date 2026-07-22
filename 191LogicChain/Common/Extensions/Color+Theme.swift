@@ -10,6 +10,14 @@ enum Theme {
 }
 
 extension Color {
+    /// Compatibility aliases used by Loading/ syndicate screens.
+    static var appBackground: Color { Theme.background }
+    static var appSurface: Color { Theme.card }
+    static var appPrimary: Color { Theme.accent }
+    static var appAccent: Color { Theme.accent }
+    static var appTextPrimary: Color { Theme.primaryText }
+    static var appTextSecondary: Color { Theme.secondaryText }
+
     init(hex: String) {
         let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int: UInt64 = 0
